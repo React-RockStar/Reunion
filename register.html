@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reunion</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/custom.css">
+    <!-- End style sheet -->
+  </head>
+  <body>
+    <div class="reunion-section">
+      <div class="register-container"> 
+        <h1 class="reunion-title">Reunion Place.</h1>
+        <div class="reunion-form">
+          <h2>Register your interest</h2>
+          <form action="contact-form-process.php" method="post" name="contact_form" id="form">
+            <div class="form-name-group">
+              <input type="text" id="fname" name="fname" placeholder="First Name">
+              <input type="text" id="sname" name="sname" placeholder="Surname">
+            </div>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" class="input-phone">
+            <input type="email" class="input-email" id="email" placeholder="Email" name="email">
+            <div class="form-city-group">
+              <input type="text" id="city" name="city" placeholder="City">
+              <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+            </div>
+            <div class="form-btn-group">
+              <input type="submit" value="Submit your enquiry" class="submit-btn">
+              <a href="tel:+61-418-584-047">
+                <p class="call-btn">Call Sarah +61 418 584 047</p>
+              </a>
+            </div>
+          </form> 
+        </div>
+        <div class="desktop-logo-group">
+          <div class="logo-item">
+            <p>Developer</p>
+            <div class="logo-img">
+              <img src="assets/images/noeticplaces.png" alt="">
+            </div>
+          </div>
+          <div class="logo-item">
+            <p>Architect</p>
+            <div class="logo-img">
+              <img src="assets/images/fender.png" alt="">
+            </div>
+          </div>
+          <div class="logo-item">
+            <p>Landscaping</p>
+            <div class="logo-img">
+              <img src="assets/images/ega.png" alt="">
+            </div>
+          </div>
+          <div class="logo-item">
+            <p>Agent</p>
+            <div class="logo-img logo-small-img">
+              <img src="assets/images/threesixty.png" alt="">
+            </div>
+          </div>
+          <div class="logo-item">
+            <p>Project Management</p>
+            <div class="logo-img logo-small-img">
+              <img src="assets/images/firsturban.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="mobile-logo-group">
+          <div class="logo-item-group">
+            <div class="logo-item">
+              <p>Developer</p>
+              <div class="logo-img">
+                <img src="assets/images/noeticplaces.png" alt="">
+              </div>
+            </div>
+            <div class="logo-item">
+              <p>Architect</p>
+              <div class="logo-img">
+                <img src="assets/images/fender.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="logo-item-group">
+            <div class="logo-item">
+              <p>Landscaping</p>
+              <div class="logo-img">
+                <img src="assets/images/ega.png" alt="">
+              </div>
+            </div>
+            <div class="logo-item">
+              <p>Agent</p>
+              <div class="logo-img logo-small-img">
+                <img src="assets/images/threesixty.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="logo-item">
+            <p>Project Management</p>
+            <div class="logo-img logo-small-img">
+              <img src="assets/images/firsturban.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+    <script src="assets/js/form-plugin.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#form").validate({
+          submitHandler: function(form) {
+            $(form).ajaxSubmit(function(data){
+              if(data = 'success') {
+                alert("Thank you for contacting us. We will be in touch with you very soon.");
+              }
+            });
+        }
+        });
+      })
+    </script>
+  </body>
+</html>

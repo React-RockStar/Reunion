@@ -1,0 +1,225 @@
+@font-face {
+	font-family: oatmeal-sans-light;
+	src: url(../fonts/Oatmeal\ Sans\ Light.woff2) format('woff2'),
+		url(../fonts/Oatmeal\ Sans\ Light.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: signifier-extra-light;
+	src: url(../fonts/Signifier-Extralight.otf);
+}
+body{
+	font-family: oatmeal-sans-light;
+	color: #fff;
+	width: 100%;
+	margin: auto;
+}
+.reunion-section{
+	background-color: #97a18f;
+	padding: 2em;
+}
+.reunion-title{
+	font-size: 3em;
+	margin: 0;
+}
+.register-content h2{
+	font-family: signifier-extra-light;
+	font-size: 3em;
+	font-weight: 100;
+	margin: 0;
+	margin-bottom: .4em;
+}
+.register-container{
+	/* background-image: linear-gradient(#6b7561,#75806c, #97a18f); */
+	background-image: url(../images/reunion-bg.jpg);
+	background-size: cover;
+	text-align: center;
+	padding: 7.5em 1.5em;
+}
+.register-content{
+	margin: 12em 0;
+}
+.register-content p{
+	margin: 0;
+	font-size: 1.5em;
+    line-height: 125%;
+}
+.register-btn{
+	font-family: oatmeal-sans-light;
+	cursor: pointer;
+	padding: 1em 0;
+	width: 15em;
+	color: #000;
+	border: 1px solid #000;
+	font-size: 1em;
+}
+.register-btn:hover{
+	color: #fff;
+    background-color: #28a745;
+}
+.register-btn:focus{
+	outline: none;
+}
+.error{
+	color: #ffc107;
+	margin-top: .7em;
+	text-align: left;
+	display: block;
+}
+/* second page */
+.reunion-form{
+	width: 60%;
+	margin: auto;
+	margin-top: 9em;
+}
+.reunion-form h2{
+	font-family: oatmeal-sans-light;
+	font-size: 2em;
+	font-weight: 100;
+	margin: 0;
+	margin-bottom: 2em;
+}
+.form-city-group{
+	margin: 3em 0;
+}
+.form-city-group,
+.form-name-group{
+	display: flex;
+	justify-content: space-between;
+}
+.form-city-group input,
+.form-name-group input{
+	width: 47%;
+}
+.reunion-form input:not([type='submit']){
+	font-family: oatmeal-sans-light;
+	background: transparent;
+	color: black;
+	border: none;
+	font-size: 1em;
+    border-bottom: 1px solid #fff;
+}
+.input-phone,
+.input-email{
+	width: 100%;
+	display: block;
+	margin-top: 3em;
+}
+.reunion-form input:not([type='submit'])::placeholder{
+	color: #fff;
+}
+.reunion-form input:focus{
+	outline: none;
+}
+.form-btn-group{
+	margin-bottom: 3em;
+	display: flex;
+	justify-content: space-between;
+}
+.submit-btn, .call-btn{
+	font-family: oatmeal-sans-light;
+	cursor: pointer;
+	color: #000;
+	border: 1px solid #000;
+	width: 100%;
+	font-size: 1em;
+	padding: 1em 0;
+}
+.call-btn{
+	display: inline-block;
+	margin: 0;
+	background-color: #fff;
+}
+.submit-btn:hover, 
+.call-btn:hover{
+	color: #fff;
+    background-color: #28a745;
+}
+.submit-btn, .form-btn-group a{
+	width: 47%;
+}
+.desktop-logo-group{
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	margin: auto;
+}
+.mobile-logo-group{
+	display: none;
+	width: 90%;
+	margin: auto;
+}
+.logo-item-group .logo-item{
+	width: 50%;
+}
+.logo-item-group{
+	display: flex;
+	margin-bottom: 2em;
+}
+.logo-item p{
+	text-align: left;
+	border-bottom: 1px solid #fff;
+	width: 100px;
+	font-size: .7em;
+	padding-bottom: .5em;
+	margin: 0;
+}
+.logo-img{
+	width: 100%;
+	text-align: left;
+	margin-top: 1em;
+}
+.logo-img img{
+	height: 30px;
+	max-width: 100%;
+}
+.logo-small-img img{
+	height: 20px;
+}
+
+/* End second page */
+
+/* Responsive style */
+@media only screen and (max-width: 1024px){
+	.reunion-form{
+		width: 90%;
+	}
+	.desktop-logo-group{
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 768px){
+	.form-city-group, .form-name-group{
+		display: block;
+	}
+	.form-name-group input{
+		width: 100%;
+	}
+	.form-name-group input:first-child{
+		margin-bottom: 3em;
+	}
+	.form-city-group input{
+		width: 100%;
+	}
+	.form-city-group input:first-child{
+		margin-bottom: 3em;
+	}
+	.desktop-logo-group{
+		display: none;
+	}
+	.mobile-logo-group{
+		display: block;
+	}
+	.logo-item{
+		width: 45%;
+	}
+	.form-btn-group{
+		display: block;
+	}
+	.submit-btn{
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+}
+/* End responsive style */
